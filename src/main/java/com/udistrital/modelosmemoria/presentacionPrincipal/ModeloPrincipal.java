@@ -4,7 +4,7 @@
  */
 package com.udistrital.modelosmemoria.presentacionPrincipal;
 
-import com.udistrital.modelosmemoria.presentacion.Modelo;
+import com.udistrital.modelosmemoria.presentacion.estatica.Modelo;
 import java.util.ArrayList;
 
 /**
