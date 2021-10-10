@@ -15,28 +15,28 @@ import java.util.List;
  */
 public class Particion {
     
-    private final int totalSpaceMiB;
+    private final int totalSpaceKiB;
     private final int startPositionY;
     private final int finishPositionY;
-    private int freeSpaceMiB;
+    private int freeSpaceKiB;
     private List<Proceso> procesos;
 
-    public Particion(int previousEndPosPartition, int totalSpaceMiB) {
-        this.totalSpaceMiB = totalSpaceMiB;
+    public Particion(int previousEndPosPartition, int totalSpaceKiB) {
+        this.totalSpaceKiB = totalSpaceKiB;
         this.startPositionY = previousEndPosPartition;
         this.finishPositionY = startPositionY + getTotalSpaceInPixels();
-        this.freeSpaceMiB = totalSpaceMiB;
+        this.freeSpaceKiB = totalSpaceKiB;
         procesos = new ArrayList<>();
     }
     
     public int getTotalSpaceInPixels(){
-        return totalSpaceMiB * UtilProcess.oneMib;
+        return totalSpaceKiB / UtilProcess.onePxInKiB;
     }
     public int getFreeSpaceInPixels(){
-        return freeSpaceMiB * UtilProcess.oneMib;
+        return freeSpaceKiB / UtilProcess.onePxInKiB;
     }
-    public int getTotalSpaceMiB() {
-        return totalSpaceMiB;
+    public int getTotalSpaceKiB() {
+        return totalSpaceKiB;
     }
 
     public int getStartPositionY() {
@@ -47,12 +47,12 @@ public class Particion {
         return finishPositionY;
     }
 
-    public int getFreeSpaceMiB() {
-        return freeSpaceMiB;
+    public int getFreeSpaceKiB() {
+        return freeSpaceKiB;
     }
 
-    public void setFreeSpaceMiB(int freeSpaceMiB) {
-        this.freeSpaceMiB = freeSpaceMiB;
+    public void setFreeSpaceKiB(int freeSpaceKiB) {
+        this.freeSpaceKiB = freeSpaceKiB;
     }
 
     public List<Proceso> getProcesos() {

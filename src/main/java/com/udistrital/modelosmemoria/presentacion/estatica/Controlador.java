@@ -33,7 +33,7 @@ public class Controlador implements ActionListener{
 
             if (boton == miVentana.getBtnCrearParticion()) {
                 getModelo().crearParticiones();
-                getModelo().dibujarParticiones();
+                //getModelo().dibujarParticiones();
             }
             if (boton == miVentana.getBtnCrearProceso()) {
                 getModelo().putProcessInMemory();
