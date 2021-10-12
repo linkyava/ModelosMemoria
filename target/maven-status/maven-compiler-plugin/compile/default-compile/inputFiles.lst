@@ -1,5 +1,6 @@
 /Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/presentacionPrincipal/VistaPrincipal.java
 /Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/presentacion/Controlador.java
+/Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/logica/Segmento.java
 /Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/main/Launcher.java
 /Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/logica/Particion.java
 /Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/presentacionPrincipal/ModeloPrincipal.java
@@ -16,3 +17,4 @@
 /Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/presentacion/segmentacion/ModeloSegmentacion.java
 /Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/logica/ParticionMemoria.java
 /Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/presentacionPrincipal/ControladorPrincipal.java
+/Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/constantes/Constantes.java

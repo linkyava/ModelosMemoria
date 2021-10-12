@@ -5,12 +5,14 @@
  */
 package com.udistrital.modelosmemoria.presentacion.segmentacion;
 
-import com.udistrital.modelosmemoria.logica.ProcesoMemoria;
 import java.awt.Graphics;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -28,7 +30,8 @@ public class VistaSegmentacion extends javax.swing.JFrame {
         miModelo = modelo;
         initComponents();
         miModelo.iniciarMemoria(this, getContentPane());
-        txtParticiones.setEnabled(miModelo.isEsEditablePartcion());
+        jComboTamParticion.setEnabled(miModelo.isEsEditablePartcion());
+        btnParticionarMem.setEnabled(miModelo.isEsEditablePartcion());
         jLblModelo.setText(miModelo.isEsEditablePartcion() ? "Segmentación" : "Particiones estáticas variables");
         capturarEventos();
     }
@@ -50,6 +53,7 @@ public class VistaSegmentacion extends javax.swing.JFrame {
         btnBorrar.addActionListener(this.getControl());
         btnCrearProceso.addActionListener(this.getControl());
         btnIniciar.addActionListener(this.getControl());
+        btnParticionarMem.addActionListener(this.getControl());
     }
 
     public ModeloSegmentacion getMiModelo() {
@@ -72,10 +76,10 @@ public class VistaSegmentacion extends javax.swing.JFrame {
         return btnIniciar;
     }
 
-    public JTextField getTxtParticiones() {
-        return txtParticiones;
+    public JComboBox<String> getjComboTamParticion() {
+        return jComboTamParticion;
     }
-
+    
     public JLabel getjLblModelo() {
         return jLblModelo;
     }
@@ -115,9 +119,11 @@ public class VistaSegmentacion extends javax.swing.JFrame {
     public void setTxtPila(JTextField txtPila) {
         this.txtPila = txtPila;
     }
-    
-    
-    
+
+    public JButton getBtnParticionarMem() {
+        return btnParticionarMem;
+    }
+   
     /*
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -141,13 +147,14 @@ public class VistaSegmentacion extends javax.swing.JFrame {
         btnIniciar = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         lblParticiones = new javax.swing.JLabel();
-        txtParticiones = new javax.swing.JTextField();
+        jComboTamParticion = new javax.swing.JComboBox<>();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTableProceso = new javax.swing.JTable();
         btnBorrar = new javax.swing.JButton();
         jLblModelo = new javax.swing.JLabel();
         btnCrearProceso = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
+        btnParticionarMem = new javax.swing.JButton();
 
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -226,26 +233,30 @@ public class VistaSegmentacion extends javax.swing.JFrame {
                 .addGap(40, 40, 40))
         );
 
-        getContentPane().add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 290, 200));
+        getContentPane().add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 290, 200));
 
+        btnIniciar.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         btnIniciar.setText("Iniciar");
-        getContentPane().add(btnIniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, 220, -1));
+        btnIniciar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(btnIniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 270, 60));
 
         jPanel1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 255, 51)));
 
-        lblParticiones.setText("Número de particiones:");
+        lblParticiones.setText("Tamaño de partición en kbps:");
+
+        jComboTamParticion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "256", "512", "1024", "2048" }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(txtParticiones, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 75, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lblParticiones)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jComboTamParticion, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 67, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -253,11 +264,11 @@ public class VistaSegmentacion extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(lblParticiones)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtParticiones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addComponent(jComboTamParticion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(23, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 270, 80));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 270, 80));
 
         jTableProceso.setBackground(new java.awt.Color(204, 204, 204));
         jTableProceso.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(102, 255, 51)));
@@ -266,14 +277,14 @@ public class VistaSegmentacion extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Nombre", "Tamaño"
+                "PID", "Tamaño total", "Detalle", "Estado"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false
+                false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -286,22 +297,33 @@ public class VistaSegmentacion extends javax.swing.JFrame {
         });
         jTableProceso.setSelectionBackground(new java.awt.Color(204, 204, 204));
         jTableProceso.setShowGrid(true);
+        jTableProceso.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTableProcesoMouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(jTableProceso);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 70, 330, 370));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 60, 340, 370));
 
         btnBorrar.setText("Borrar");
+        btnBorrar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(btnBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 450, 250, -1));
 
         jLblModelo.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
         getContentPane().add(jLblModelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 10, 540, 40));
 
         btnCrearProceso.setText("Crear");
-        getContentPane().add(btnCrearProceso, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 430, 136, -1));
+        btnCrearProceso.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(btnCrearProceso, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 500, 136, -1));
 
         jLabel4.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel4.setText("Memoria");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 20, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 20, -1, -1));
+
+        btnParticionarMem.setText("Crear particiones");
+        btnParticionarMem.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(btnParticionarMem, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 270, 20));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -310,10 +332,21 @@ public class VistaSegmentacion extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtPilaActionPerformed
 
+    private void jTableProcesoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableProcesoMouseClicked
+        // TODO add your handling code here:
+        DefaultTableModel modelTabla = (DefaultTableModel)getjTableProceso().getModel();
+        if(!getjTableProceso().getSelectionModel().isSelectionEmpty()){
+            String detalle = modelTabla.getValueAt(getjTableProceso().getSelectedRow(), 2).toString();
+            JOptionPane.showMessageDialog(null, detalle, "Detalle partición", JOptionPane.CANCEL_OPTION);
+        }
+    }//GEN-LAST:event_jTableProcesoMouseClicked
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBorrar;
     private javax.swing.JButton btnCrearProceso;
     private javax.swing.JButton btnIniciar;
+    private javax.swing.JButton btnParticionarMem;
+    private javax.swing.JComboBox<String> jComboTamParticion;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -330,7 +363,6 @@ public class VistaSegmentacion extends javax.swing.JFrame {
     private javax.swing.JLabel lblParticiones;
     private javax.swing.JTextField txtCodigo;
     private javax.swing.JTextField txtDatos;
-    private javax.swing.JTextField txtParticiones;
     private javax.swing.JTextField txtPila;
     // End of variables declaration//GEN-END:variables
 }

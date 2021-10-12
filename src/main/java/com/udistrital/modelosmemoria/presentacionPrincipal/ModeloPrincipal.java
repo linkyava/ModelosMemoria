@@ -35,14 +35,12 @@ public class ModeloPrincipal {
     public void abrirVentanaVariable(){
         modeloVarSeg = new ModeloSegmentacion();
         modeloVarSeg.setEsEditablePartcion(false);
-        modeloVarSeg.setProcesos(new ArrayList<>());
         modeloVarSeg.iniciar();
     }
     
      public void abrirVentanaSegmentacion(){
         modeloVarSeg = new ModeloSegmentacion();
         modeloVarSeg.setEsEditablePartcion(true);
-        modeloVarSeg.setProcesos(new ArrayList<>());
         modeloVarSeg.iniciar();
     }
     

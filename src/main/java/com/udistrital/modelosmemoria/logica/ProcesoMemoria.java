@@ -10,6 +10,16 @@ public class ProcesoMemoria {
     private int pesoPila;
     private int pesoTotal;
     private boolean ubicado;
+    private String estado;
+
+    public ProcesoMemoria(int pesoDatos, int pesoCodigo, int pesoPila) {
+        this.pesoDatos = pesoDatos;
+        this.pesoCodigo = pesoCodigo;
+        this.pesoPila = pesoPila;
+    }
+
+    public ProcesoMemoria() {
+    }
     
     private Color color;
 
@@ -68,7 +78,14 @@ public class ProcesoMemoria {
     public void setUbicado(boolean ubicado) {
         this.ubicado = ubicado;
     }
-    
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
     
     
 	

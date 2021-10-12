@@ -12,6 +12,7 @@ import java.util.List;
  */
 public class ParticionMemoria {
     
+    private int numeroParticion;
     private String direccionInicialHexa;
     private String direccionFinalHexa;
     private int direccionInicialByte;
@@ -21,7 +22,7 @@ public class ParticionMemoria {
     private int yAnt;
     private int capacidadKbs;
     private int libreKbs;
-    private List<ProcesoMemoria> proceso;
+    private List<Segmento> segmentos;
     private boolean llena;
     
     public String getDireccionInicialHexa() {
@@ -56,12 +57,12 @@ public class ParticionMemoria {
         this.direccionFinalByte = direccionFinalByte;
     }
 
-    public List<ProcesoMemoria> getProceso() {
-        return proceso;
+    public List<Segmento> getSegmentos() {
+        return segmentos;
     }
 
-    public void setProceso(List<ProcesoMemoria> proceso) {
-        this.proceso = proceso;
+    public void setSegmentos(List<Segmento> segmentos) {
+        this.segmentos = segmentos;
     }
 
     public int getxPrint() {
@@ -110,6 +111,14 @@ public class ParticionMemoria {
 
     public void setLlena(boolean llena) {
         this.llena = llena;
+    }
+
+    public int getNumeroParticion() {
+        return numeroParticion;
+    }
+
+    public void setNumeroParticion(int numeroParticion) {
+        this.numeroParticion = numeroParticion;
     }
     
     @Override

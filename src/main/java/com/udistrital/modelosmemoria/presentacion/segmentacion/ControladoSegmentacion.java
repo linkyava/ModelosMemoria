@@ -41,6 +41,9 @@ public class ControladoSegmentacion implements ActionListener{
                 
                 modelo.borrarRowTabla();
                 
+            }else if(button == miVentana.getBtnParticionarMem()){
+                
+                modelo.particionarMemoria();
             }
             
             

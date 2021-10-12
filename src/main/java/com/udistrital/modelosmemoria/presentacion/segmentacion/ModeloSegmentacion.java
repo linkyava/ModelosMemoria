@@ -11,7 +11,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.Vector;
-import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -41,7 +40,6 @@ public class ModeloSegmentacion {
         listColors.add(Color.green);
         listColors.add(Color.pink);
         listColors.add(Color.gray);
-        listColors.add(Color.yellow);
         listColors.add(Color.orange);
         listColors.add(Color.magenta);
     }
@@ -56,31 +54,22 @@ public class ModeloSegmentacion {
     }
 
     public void iniciar() {
-        getVentana().setSize(1080, 900);
+        iniciarProcesosDefecto();
+        getVentana().setSize(1080, 950);
         getVentana().setVisible(true);
     }
-
-    /**
-     *
-     * @param pTxtParticiones
-     */
-    public void iniciarGestionMemoria() {
+    
+    public void particionarMemoria() {
         String pTxtParticiones = null;
 
         try {
-            pTxtParticiones = this.miVentana.getTxtParticiones().getText();
+            pTxtParticiones = this.miVentana.getjComboTamParticion().getSelectedItem().toString();  //getTxtParticiones().getText();
 
-            if (esEditablePartcion && (pTxtParticiones == null || pTxtParticiones.trim().length() == 0)) {
+            if ((pTxtParticiones == null || pTxtParticiones.trim().length() == 0)) {
                 JOptionPane.showMessageDialog(null, "Debe ingresar un valor válido para el número de particiones", "Error", JOptionPane.CANCEL_OPTION);
             } else {
-
-                if (esEditablePartcion) {
-                    objMemoria.setCantParticiones(Integer.parseInt(pTxtParticiones));
-                    memoria.repaint();
-                } else {
-                    organizarProcesoMemoria();
-                }
-
+                objMemoria.setCantParticiones(Integer.parseInt(pTxtParticiones));
+                objMemoria.repaint();
             }
 
         } catch (NumberFormatException e) {
@@ -89,22 +78,30 @@ public class ModeloSegmentacion {
     }
 
     /**
+     *s
+     * @param pTxtParticiones
+     */
+    public void iniciarGestionMemoria() {
+        organizarProcesoMemoria();
+    }
+
+    /**
      * Iniciar memoria con valores por defecto
      *
      * @param pContaniner
      */
-    public void iniciarMemoria(JFrame principal, Container pContaniner) {
+    public void iniciarMemoria(VistaSegmentacion vista, Container pContaniner) {
         pContaniner.setLayout(null);
         memoria = new JPanel();
         {
-            objMemoria = new Memoria();
+            objMemoria = new Memoria(vista);
             objMemoria.setEsVariable(!this.esEditablePartcion);
             memoria.add(objMemoria);
 
         }
 
         final JScrollPane scroll = new JScrollPane();
-        scroll.setBounds(750, 70, 280, 670);
+        scroll.setBounds(730, 70, 280, 670);
         scroll.setViewportView(memoria);
         pContaniner.add(scroll);
 
@@ -118,11 +115,11 @@ public class ModeloSegmentacion {
 
         if (procesoMemoria != null) {
             llenarTabla(procesoMemoria);
-            objMemoria.setProcesos(procesos);
         }
     }
 
     public void organizarProcesoMemoria() {
+        objMemoria.setProcesos(procesos);
         objMemoria.dibujarProceso();
     }
 
@@ -174,7 +171,7 @@ public class ModeloSegmentacion {
      * @param p
      */
     public void llenarTabla(ProcesoMemoria p) {
-        modelTabla = (DefaultTableModel) miVentana.getjTableProceso().getModel();
+        modelTabla = (DefaultTableModel)  getVentana().getjTableProceso().getModel();
         Random rand = new Random();
         Vector row = new Vector();
         p.setPID(rand.nextInt(2000));
@@ -192,21 +189,47 @@ public class ModeloSegmentacion {
       if(!miVentana.getjTableProceso().getSelectionModel().isSelectionEmpty()){
         String pid = modelTabla.getValueAt(miVentana.getjTableProceso().getSelectedRow(), 0).toString();
 
-          if (objMemoria.getProcesos() != null && objMemoria.getProcesos().size() > 0) {
-              for (ProcesoMemoria proceso : objMemoria.getProcesos()) {
+          if (procesos != null && procesos.size() > 0) {
+              for (ProcesoMemoria proceso : procesos) {
                   if (proceso.getPID() == Integer.valueOf(pid))
                   {
-                      objMemoria.getProcesos().remove(proceso);
+                      procesos.remove(proceso);
                   }
               }
           }
 
           if(objMemoria.isRepaintProcess()){
+              objMemoria.setProcesos(procesos);
               objMemoria.dibujarProceso();
           }
 
           modelTabla.removeRow(miVentana.getjTableProceso().getSelectedRow());
       }
+    }
+    
+    public void iniciarProcesosDefecto(){
+        ProcesoMemoria p = null;
+        procesos = new ArrayList<>();
+        
+        p = new ProcesoMemoria( 512, 512, 512);
+        llenarTabla(p);
+        
+          
+        p = new ProcesoMemoria( 256, 256, 256);
+        llenarTabla(p);
+        
+          
+        p = new ProcesoMemoria( 128, 128, 128);
+        llenarTabla(p);
+        
+          
+        p = new ProcesoMemoria( 100, 100, 100);
+        llenarTabla(p);
+        
+          
+        p = new ProcesoMemoria( 256, 256, 256);
+        llenarTabla(p);
+     
     }
 
     public boolean isEsEditablePartcion() {

@@ -53,7 +53,7 @@ public class ControladorPrincipal implements ActionListener{
             }
             
             if (menuItem == miVentana.getjMenuSegmentacion()) {
-
+                 modelo.abrirVentanaSegmentacion();
             }
             
             if (menuItem == miVentana.getjMenuPaginacion()) {
