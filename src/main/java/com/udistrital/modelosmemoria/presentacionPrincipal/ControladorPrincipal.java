@@ -44,7 +44,7 @@ public class ControladorPrincipal implements ActionListener{
             }
             
             if (menuItem == miVentana.getjMenuDinamicaS()) {
-
+               modelo.abrirVentanaPDinamica();
             }
             
             if (menuItem == miVentana.getjMenuDinamicaC()) {

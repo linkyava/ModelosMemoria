@@ -5,6 +5,7 @@
 package com.udistrital.modelosmemoria.presentacionPrincipal;
 
 import com.udistrital.modelosmemoria.presentacion.Modelo;
+import com.udistrital.modelosmemoria.presentacionPDinamica.ModeloPDinamica;
 import java.util.ArrayList;
 
 /**
@@ -14,6 +15,7 @@ import java.util.ArrayList;
 public class ModeloPrincipal {
     
     Modelo miApp;
+    ModeloPDinamica modeloPDinamica;
     private VistaPrincipal miVentana;
 
 
@@ -28,6 +30,11 @@ public class ModeloPrincipal {
     public void abrirVentanaEstatica(){
         miApp = new Modelo();
         miApp.iniciar();
+    }
+    
+    public void abrirVentanaPDinamica(){
+        modeloPDinamica = new ModeloPDinamica();
+        modeloPDinamica.iniciar();
     }
     
    public void iniciar(){

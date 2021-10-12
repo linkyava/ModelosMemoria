@@ -43,6 +43,7 @@ public class Vista extends javax.swing.JFrame {
         btnCrearParticion.addActionListener(getControl());
         btnCrearProceso.addActionListener(getControl());
         btnBorrarProceso.addActionListener(getControl());
+        
     }
     
     @Override
