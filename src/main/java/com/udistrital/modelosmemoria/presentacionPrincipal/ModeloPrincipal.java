@@ -5,6 +5,7 @@
 package com.udistrital.modelosmemoria.presentacionPrincipal;
 
 import com.udistrital.modelosmemoria.presentacion.Modelo;
+import com.udistrital.modelosmemoria.presentacion.segmentacion.ModeloSegmentacion;
 import java.util.ArrayList;
 
 /**
@@ -14,6 +15,8 @@ import java.util.ArrayList;
 public class ModeloPrincipal {
     
     Modelo miApp;
+    ModeloSegmentacion modeloVarSeg;
+    
     private VistaPrincipal miVentana;
 
 
@@ -24,10 +27,23 @@ public class ModeloPrincipal {
         return miVentana;
     }
     
-    
     public void abrirVentanaEstatica(){
         miApp = new Modelo();
         miApp.iniciar();
+    }
+    
+    public void abrirVentanaVariable(){
+        modeloVarSeg = new ModeloSegmentacion();
+        modeloVarSeg.setEsEditablePartcion(false);
+        modeloVarSeg.setProcesos(new ArrayList<>());
+        modeloVarSeg.iniciar();
+    }
+    
+     public void abrirVentanaSegmentacion(){
+        modeloVarSeg = new ModeloSegmentacion();
+        modeloVarSeg.setEsEditablePartcion(true);
+        modeloVarSeg.setProcesos(new ArrayList<>());
+        modeloVarSeg.iniciar();
     }
     
    public void iniciar(){
