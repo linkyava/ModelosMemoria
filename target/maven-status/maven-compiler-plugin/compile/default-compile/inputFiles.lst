@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/presentacionPrincipal/VistaPrincipal.java
 /Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/presentacion/Controlador.java
 /Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/logica/Segmento.java
@@ -40,3 +41,16 @@ C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\jav
 C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\java\com\udistrital\modelosmemoria\logica\paginacion\Marcos.java
 C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\java\com\udistrital\modelosmemoria\presentacionPrincipal\ModeloPrincipal.java
 >>>>>>> main
+=======
+C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\presentacionPrincipal\ControladorPrincipal.java
+C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\presentacionPDinamica\ControladorPDinamica.java
+C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\presentacion\Controlador.java
+C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\logica\Particion.java
+C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\presentacionPrincipal\ModeloPrincipal.java
+C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\presentacion\Vista.java
+C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\presentacionPrincipal\VistaPrincipal.java
+C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\main\Launcher.java
+C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\presentacion\Modelo.java
+C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\logica\util\UtilProcess.java
+C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\logica\Proceso.java
+>>>>>>> remotes/origin/particion_dinamica

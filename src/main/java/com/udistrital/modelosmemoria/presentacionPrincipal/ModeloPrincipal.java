@@ -7,6 +7,7 @@ package com.udistrital.modelosmemoria.presentacionPrincipal;
 import com.udistrital.modelosmemoria.presentacion.estatica.Modelo;
 import com.udistrital.modelosmemoria.presentacion.paginacion.ModeloPaginacion;
 import com.udistrital.modelosmemoria.presentacion.segmentacion.ModeloSegmentacion;
+import com.udistrital.modelosmemoria.presentacionPDinamica.ModeloPDinamica;
 import java.util.ArrayList;
 
 /**
@@ -18,7 +19,7 @@ public class ModeloPrincipal {
     Modelo miApp;
     ModeloPaginacion modeloPaginacion;
     ModeloSegmentacion modeloVarSeg;
-    
+    ModeloPDinamica modeloPDinamica;
     private VistaPrincipal miVentana;
 
 
@@ -49,6 +50,11 @@ public class ModeloPrincipal {
     public void abrirVentanaPaginacion(){
         modeloPaginacion = new ModeloPaginacion();
         modeloPaginacion.iniciar();
+    }
+    
+    public void abrirVentanaPDinamica(){
+        modeloPDinamica = new ModeloPDinamica();
+        modeloPDinamica.iniciar();
     }
     
    public void iniciar(){
