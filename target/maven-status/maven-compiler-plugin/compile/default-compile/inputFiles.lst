@@ -1,3 +1,25 @@
+<<<<<<< HEAD
+/Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/presentacionPrincipal/VistaPrincipal.java
+/Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/presentacion/Controlador.java
+/Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/logica/Segmento.java
+/Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/main/Launcher.java
+/Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/logica/Particion.java
+/Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/presentacionPrincipal/ModeloPrincipal.java
+/Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/presentacion/segmentacion/Memoria.java
+/Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/logica/ProcesoMemoria.java
+/Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/logica/util/ConvertDecimalToHexadecimal.java
+/Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/presentacion/Modelo.java
+/Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/presentacion/segmentacion/ControladoSegmentacion.java
+/Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/presentacion/segmentacion/VistaSegmentacion.java
+/Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/presentacion/Vista.java
+/Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/logica/PaginaProceso.java
+/Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/logica/Proceso.java
+/Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/logica/util/UtilProcess.java
+/Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/presentacion/segmentacion/ModeloSegmentacion.java
+/Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/logica/ParticionMemoria.java
+/Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/presentacionPrincipal/ControladorPrincipal.java
+/Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/constantes/Constantes.java
+=======
 C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\java\com\udistrital\modelosmemoria\logica\util\UtilProcess.java
 C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\java\com\udistrital\modelosmemoria\presentacion\paginacion\ControladorPaginacion.java
 C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\java\com\udistrital\modelosmemoria\presentacion\estatica\Vista.java
@@ -17,3 +39,4 @@ C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\jav
 C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\java\com\udistrital\modelosmemoria\presentacion\paginacion\ModeloPaginacion.java
 C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\java\com\udistrital\modelosmemoria\logica\paginacion\Marcos.java
 C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\java\com\udistrital\modelosmemoria\presentacionPrincipal\ModeloPrincipal.java
+>>>>>>> main

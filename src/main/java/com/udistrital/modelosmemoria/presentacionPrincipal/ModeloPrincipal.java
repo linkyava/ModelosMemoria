@@ -6,6 +6,7 @@ package com.udistrital.modelosmemoria.presentacionPrincipal;
 
 import com.udistrital.modelosmemoria.presentacion.estatica.Modelo;
 import com.udistrital.modelosmemoria.presentacion.paginacion.ModeloPaginacion;
+import com.udistrital.modelosmemoria.presentacion.segmentacion.ModeloSegmentacion;
 import java.util.ArrayList;
 
 /**
@@ -13,10 +14,13 @@ import java.util.ArrayList;
  * @author linkyava
  */
 public class ModeloPrincipal {
-
+    
     Modelo miApp;
     ModeloPaginacion modeloPaginacion;
+    ModeloSegmentacion modeloVarSeg;
+    
     private VistaPrincipal miVentana;
+
 
     public VistaPrincipal getVentana() {
         if (miVentana == null) {
@@ -24,10 +28,22 @@ public class ModeloPrincipal {
         }
         return miVentana;
     }
-
-    public void abrirVentanaEstatica() {
+    
+    public void abrirVentanaEstatica(){
         miApp = new Modelo();
         miApp.iniciar();
+    }
+    
+    public void abrirVentanaVariable(){
+        modeloVarSeg = new ModeloSegmentacion();
+        modeloVarSeg.setEsEditablePartcion(false);
+        modeloVarSeg.iniciar();
+    }
+    
+     public void abrirVentanaSegmentacion(){
+        modeloVarSeg = new ModeloSegmentacion();
+        modeloVarSeg.setEsEditablePartcion(true);
+        modeloVarSeg.iniciar();
     }
     
     public void abrirVentanaPaginacion(){
@@ -35,9 +51,9 @@ public class ModeloPrincipal {
         modeloPaginacion.iniciar();
     }
     
-    public void iniciar() {
+   public void iniciar(){
         getVentana().setSize(400, 400);
         getVentana().setVisible(true);
     }
-
+    
 }
