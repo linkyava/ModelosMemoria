@@ -3,9 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.udistrital.modelosmemoria.presentacion.estatica;
+package com.udistrital.modelosmemoria.presentacion.paginacion;
 
+import com.udistrital.modelosmemoria.presentacion.estatica.*;
 import com.udistrital.modelosmemoria.logica.Proceso;
+import com.udistrital.modelosmemoria.logica.paginacion.ProcesoPaginacion;
+import com.udistrital.modelosmemoria.logica.paginacion.TablaPaginacion;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -20,17 +23,17 @@ import javax.swing.Scrollable;
  *
  * @author Cristian C4
  */
-public class PanelMemoria extends JPanel implements Scrollable {
+public class PanelMemoriaPaginacion extends JPanel implements Scrollable {
     
-    private Modelo miModelo;
+    private ModeloPaginacion miModelo;
     
-    public PanelMemoria(Modelo m) {
+    public PanelMemoriaPaginacion(ModeloPaginacion m) {
         this.miModelo = m;
         this.setBackground(Color.white);
     }
 
     
-    public Modelo getMiModelo() {
+    public ModeloPaginacion getMiModelo() {
         return miModelo;
     }
     @Override
@@ -39,23 +42,26 @@ public class PanelMemoria extends JPanel implements Scrollable {
         Graphics2D g2d = (Graphics2D) g.create();
         getMiModelo().crearSistemaOperativo(g2d);
         getMiModelo().dibujarTablaParticion(g2d);
-        dibujarParticiones(g2d);
+        dibujarMarcos(g2d);
         dibujarProcesos(g2d);
         g2d.dispose();
     }
 
-    public void dibujarParticiones(Graphics2D g2d){
-        if(getMiModelo().getParticiones() != null){
-            getMiModelo().dibujarParticiones(g2d);
+    public void dibujarMarcos(Graphics2D g2d){
+        if(getMiModelo().getMarcos()!= null){
+            getMiModelo().dibujarMarcos(g2d);
         }
     }
     
     public void dibujarProcesos(Graphics2D g2d){
-        if(getMiModelo().getProcesos() != null){
-            List<Proceso> p = getMiModelo().getProcesos();
-            for (int i = 0; i < p.size(); i++) {
+        if(getMiModelo().getTablaAtenidos()!= null){
+            List<TablaPaginacion> tabla = getMiModelo().getTablaAtenidos();//tabla de paginas
+            for (int i = 0; i < tabla.size(); i++) {
                 //dibujar procesos en el arreglo
-                getMiModelo().dibujarProceso(p.get(i), g2d);
+                System.out.println("Proceso -> "+tabla.get(i).getProceso().getNombreProceso());
+                System.out.println("Pagina -> "+tabla.get(i).getPagina().getNumeroPagina());
+                System.out.println("Marco -> "+tabla.get(i).getMarco().getNumeroMarco()+ " ("+tabla.get(i).getMarco().getInicioPosMarco()+","+tabla.get(i).getMarco().getFinPosMarco()+")");
+                getMiModelo().dibujarProceso(tabla.get(i), g2d);
             }
         }
     }

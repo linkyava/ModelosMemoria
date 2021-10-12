@@ -3,15 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.udistrital.modelosmemoria.presentacion.estatica;
+package com.udistrital.modelosmemoria.presentacion.paginacion;
 
-import java.awt.Color;
-import java.awt.Graphics;
 import javax.swing.JButton;
 import javax.swing.JTextField;
-import com.udistrital.modelosmemoria.logica.util.UtilProcess;
 import javax.swing.JComboBox;
-import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
@@ -19,45 +15,45 @@ import javax.swing.JTable;
  *
  * @author Cristian C4
  */
-public class Vista extends javax.swing.JFrame {
+public class VistaPaginacion extends javax.swing.JFrame {
 
-    private Modelo miModelo;
-    private Controlador miControlador;
-    private PanelMemoria memoria;
+    private ModeloPaginacion miModelo;
+    private ControladorPaginacion miControlador;
+    private PanelMemoriaPaginacion memoria;
 
     /**
      * Creates new form Vista
      */
-    public Vista(Modelo modelo) {
+    public VistaPaginacion(ModeloPaginacion modelo) {
         miModelo = modelo;
         initComponents();
         capturarEventos();
         initMemoryPanel();
     }
 
-    public PanelMemoria getMemoria() {
+    public PanelMemoriaPaginacion getMemoria() {
         return memoria;
     }
 
-    public Controlador getControl() {
+    public ControladorPaginacion getControl() {
         if (miControlador == null) {
-            miControlador = new Controlador(this);
+            miControlador = new ControladorPaginacion(this);
         }
         return miControlador;
     }
 
-    public Modelo getMiModelo() {
+    public ModeloPaginacion getMiModelo() {
         return miModelo;
     }
 
     public void capturarEventos() {
-        btnCrearParticion.addActionListener(getControl());
+        btnCrearMarcos.addActionListener(getControl());
         btnCrearProceso.addActionListener(getControl());
         btnBorrarProceso.addActionListener(getControl());
     }
 
     public JButton getBtnCrearParticion() {
-        return btnCrearParticion;
+        return btnCrearMarcos;
     }
 
     public JButton getBtnCrearProceso() {
@@ -85,15 +81,15 @@ public class Vista extends javax.swing.JFrame {
     }
 
     public JComboBox<String> getjCBTamanoParticion() {
-        return jCBTamanoParticion;
+        return jCBTamanoPagina;
     }
 
     public JComboBox<String> getjCBTamanoProceso() {
         return jCBTamanoProceso;
     }
-
+    
     public void initMemoryPanel() {
-        memoria = new PanelMemoria(miModelo);
+        memoria = new PanelMemoriaPaginacion(miModelo);
         this.getContentPane().add(new JScrollPane(memoria), new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 30, 180, 300));
         memoria.setVisible(true);
         memoria.setSize(200, 200);
@@ -123,8 +119,8 @@ public class Vista extends javax.swing.JFrame {
         btnBorrarProceso = new javax.swing.JButton();
         jPanel8 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jCBTamanoParticion = new javax.swing.JComboBox<>();
-        btnCrearParticion = new javax.swing.JButton();
+        jCBTamanoPagina = new javax.swing.JComboBox<>();
+        btnCrearMarcos = new javax.swing.JButton();
 
         jButton3.setText("jButton3");
 
@@ -181,24 +177,24 @@ public class Vista extends javax.swing.JFrame {
                     .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btnCrearProceso)
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 230, 170));
+        getContentPane().add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 230, 240));
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "Nombre", "Tamaño"
+                "Proceso", "Pagina", "Marco"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false
+                false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -219,10 +215,10 @@ public class Vista extends javax.swing.JFrame {
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(66, 66, 66)
+                .addGap(73, 73, 73)
                 .addComponent(btnBorrarProceso)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -230,19 +226,19 @@ public class Vista extends javax.swing.JFrame {
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 217, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(btnBorrarProceso)
                 .addContainerGap())
         );
 
-        getContentPane().add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 20, 210, 280));
+        getContentPane().add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 20, 210, 310));
 
         jLabel1.setText("Tamaño : ");
 
-        jCBTamanoParticion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "128 KiB", "256 KiB", "512 KiB", "1 MiB", "2 MiB", "3.5 MiB", "7 MiB", "14 MiB" }));
+        jCBTamanoPagina.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "128 KiB", "256 KiB", "512 KiB", "1 MiB", "2 MiB" }));
 
-        btnCrearParticion.setText("Crear");
+        btnCrearMarcos.setText("Crear");
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -253,8 +249,8 @@ public class Vista extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnCrearParticion)
-                    .addComponent(jCBTamanoParticion, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnCrearMarcos)
+                    .addComponent(jCBTamanoPagina, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(41, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
@@ -263,10 +259,10 @@ public class Vista extends javax.swing.JFrame {
                 .addGap(37, 37, 37)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jCBTamanoParticion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jCBTamanoPagina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(btnCrearParticion)
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addComponent(btnCrearMarcos)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 220, 110));
@@ -276,10 +272,10 @@ public class Vista extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBorrarProceso;
-    private javax.swing.JButton btnCrearParticion;
+    private javax.swing.JButton btnCrearMarcos;
     private javax.swing.JButton btnCrearProceso;
     private javax.swing.JButton jButton3;
-    private javax.swing.JComboBox<String> jCBTamanoParticion;
+    private javax.swing.JComboBox<String> jCBTamanoPagina;
     private javax.swing.JComboBox<String> jCBTamanoProceso;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel6;

@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.udistrital.modelosmemoria.presentacion.estatica;
+package com.udistrital.modelosmemoria.presentacion.paginacion;
 
+import com.udistrital.modelosmemoria.presentacion.estatica.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -13,16 +14,16 @@ import javax.swing.JButton;
  *
  * @author Cristian C4
  */
-public class Controlador implements ActionListener{
+public class ControladorPaginacion implements ActionListener{
 
-    private final Vista miVentana;
-    private Modelo modelo;
+    private final VistaPaginacion miVentana;
+    private ModeloPaginacion modelo;
     
-    public Controlador(Vista miVista){
+    public ControladorPaginacion(VistaPaginacion miVista){
         miVentana = miVista;
         modelo = miVentana.getMiModelo();
     }
-     public Modelo getModelo() {
+     public ModeloPaginacion getModelo() {
         return modelo;
     }
     @Override
@@ -32,15 +33,15 @@ public class Controlador implements ActionListener{
             JButton boton = (JButton) e.getSource();            
 
             if (boton == miVentana.getBtnCrearParticion()) {
-                getModelo().crearParticiones();
-                //getModelo().dibujarParticiones();
+                getModelo().crearMarcos();
             }
             if (boton == miVentana.getBtnCrearProceso()) {
-                getModelo().putProcessInMemory();
+                getModelo().crearProceso();
+                
             }
             
             if (boton == miVentana.getBtnBorrarProceso()) {
-                getModelo().borrarProceso();
+                getModelo().borrarRegistroTabPag();
             }
         }
     }
