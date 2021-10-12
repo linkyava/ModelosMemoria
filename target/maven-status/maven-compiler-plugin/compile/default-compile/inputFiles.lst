@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/presentacionPrincipal/VistaPrincipal.java
 /Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/presentacion/Controlador.java
 /Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/logica/Segmento.java
@@ -18,3 +19,24 @@
 /Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/logica/ParticionMemoria.java
 /Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/presentacionPrincipal/ControladorPrincipal.java
 /Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/constantes/Constantes.java
+=======
+C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\java\com\udistrital\modelosmemoria\logica\util\UtilProcess.java
+C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\java\com\udistrital\modelosmemoria\presentacion\paginacion\ControladorPaginacion.java
+C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\java\com\udistrital\modelosmemoria\presentacion\estatica\Vista.java
+C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\java\com\udistrital\modelosmemoria\logica\Proceso.java
+C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\java\com\udistrital\modelosmemoria\logica\paginacion\TablaPaginacion.java
+C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\java\com\udistrital\modelosmemoria\presentacion\paginacion\PanelMemoriaPaginacion.java
+C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\java\com\udistrital\modelosmemoria\presentacion\estatica\Modelo.java
+C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\java\com\udistrital\modelosmemoria\main\Launcher.java
+C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\java\com\udistrital\modelosmemoria\presentacion\paginacion\VistaPaginacion.java
+C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\java\com\udistrital\modelosmemoria\presentacion\estatica\PanelMemoria.java
+C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\java\com\udistrital\modelosmemoria\logica\paginacion\Pagina.java
+C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\java\com\udistrital\modelosmemoria\presentacionPrincipal\VistaPrincipal.java
+C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\java\com\udistrital\modelosmemoria\presentacionPrincipal\ControladorPrincipal.java
+C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\java\com\udistrital\modelosmemoria\logica\paginacion\ProcesoPaginacion.java
+C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\java\com\udistrital\modelosmemoria\logica\Particion.java
+C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\java\com\udistrital\modelosmemoria\presentacion\estatica\Controlador.java
+C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\java\com\udistrital\modelosmemoria\presentacion\paginacion\ModeloPaginacion.java
+C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\java\com\udistrital\modelosmemoria\logica\paginacion\Marcos.java
+C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\java\com\udistrital\modelosmemoria\presentacionPrincipal\ModeloPrincipal.java
+>>>>>>> main

@@ -11,24 +11,24 @@ import com.udistrital.modelosmemoria.logica.util.UtilProcess;
  */
 public class Proceso {
     
-    private int totalSpaceMiB;
+    private int totalSpaceKiB;
     private String nameProcess;
     private int startPosProcess;
     private int finishPosProcess;
 
-    public Proceso(int totalSpaceMiB, String nameProcess, int previousEndPosProcess) {
-        this.totalSpaceMiB = totalSpaceMiB;
+    public Proceso(int totalSpaceKiB, String nameProcess, int previousEndPosProcess) {
+        this.totalSpaceKiB = totalSpaceKiB;
         this.nameProcess = nameProcess;
         this.startPosProcess = previousEndPosProcess;
         this.finishPosProcess = getTotalSpaceInPixels()+startPosProcess;
     }
     
     public int getTotalSpaceInPixels(){
-        return totalSpaceMiB * UtilProcess.oneMib;
+        return totalSpaceKiB / UtilProcess.onePxInKiB;
     }
 
-    public int getTotalSpaceMiB() {
-        return totalSpaceMiB;
+    public int getTotalSpaceKiB() {
+        return totalSpaceKiB;
     }
 
     public String getNameProcess() {

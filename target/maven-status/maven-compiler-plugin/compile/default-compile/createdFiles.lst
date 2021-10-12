@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 com/udistrital/modelosmemoria/logica/Particion.class
 com/udistrital/modelosmemoria/presentacion/segmentacion/VistaSegmentacion$1.class
 com/udistrital/modelosmemoria/presentacion/Modelo.class
@@ -23,3 +24,26 @@ com/udistrital/modelosmemoria/logica/util/UtilProcess.class
 com/udistrital/modelosmemoria/logica/Proceso.class
 com/udistrital/modelosmemoria/presentacion/Vista$2.class
 com/udistrital/modelosmemoria/constantes/Constantes.class
+=======
+com\udistrital\modelosmemoria\logica\paginacion\TablaPaginacion.class
+com\udistrital\modelosmemoria\logica\paginacion\Pagina.class
+com\udistrital\modelosmemoria\logica\util\UtilProcess.class
+com\udistrital\modelosmemoria\main\Launcher.class
+com\udistrital\modelosmemoria\presentacion\paginacion\PanelMemoriaPaginacion.class
+com\udistrital\modelosmemoria\logica\paginacion\Marcos.class
+com\udistrital\modelosmemoria\presentacion\paginacion\VistaPaginacion$1.class
+com\udistrital\modelosmemoria\presentacionPrincipal\ControladorPrincipal.class
+com\udistrital\modelosmemoria\presentacion\estatica\Vista$1.class
+com\udistrital\modelosmemoria\logica\Proceso.class
+com\udistrital\modelosmemoria\presentacion\estatica\Vista.class
+com\udistrital\modelosmemoria\presentacion\estatica\Modelo.class
+com\udistrital\modelosmemoria\logica\Particion.class
+com\udistrital\modelosmemoria\presentacion\estatica\PanelMemoria.class
+com\udistrital\modelosmemoria\presentacionPrincipal\VistaPrincipal.class
+com\udistrital\modelosmemoria\logica\paginacion\ProcesoPaginacion.class
+com\udistrital\modelosmemoria\presentacion\estatica\Controlador.class
+com\udistrital\modelosmemoria\presentacion\paginacion\VistaPaginacion.class
+com\udistrital\modelosmemoria\presentacion\paginacion\ModeloPaginacion.class
+com\udistrital\modelosmemoria\presentacionPrincipal\ModeloPrincipal.class
+com\udistrital\modelosmemoria\presentacion\paginacion\ControladorPaginacion.class
+>>>>>>> main
