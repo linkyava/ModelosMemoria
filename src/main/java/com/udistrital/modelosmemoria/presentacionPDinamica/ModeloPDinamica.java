@@ -97,7 +97,8 @@ public class ModeloPDinamica {
 
     public void dibujarParticion() {
         DefaultListModel modelo = new DefaultListModel();
-        System.out.println("Dibujando Particion...");
+        DefaultListModel modelo2 = new DefaultListModel();
+        System.out.println("Dibujando Partición");
         Graphics g = getVentanapDinamica().getObjMemoria().getGraphics();
         g.setColor(Color.BLACK);
         for (int i = 0; i < getVentanapDinamica().getObjMemoria().getParticionesOcupadas().size(); i++) {
@@ -110,12 +111,19 @@ public class ModeloPDinamica {
                 limpiarProceso(particion);
             }
         }
-        if (modelo.size() > 0) {
+
             getVentanapDinamica().getjList1().setModel(modelo);
-        }
+
         if (getVentanapDinamica().getObjMemoria().getParticionesDesocupadas().size() == 0) {
             getVentanapDinamica().getCheckBox().setSelected(false);
         }
+        for(int i = 0; i < getVentanapDinamica().getObjMemoria().getProcesosInactivos().size(); i++){
+            ProcesoPDinamica proceso = getVentanapDinamica().getObjMemoria().getProcesosInactivos().get(i);
+            modelo2.addElement("Proceso " + proceso.getNombre() + "(" + TamañoKib(proceso.getTamaño() + "") + ") (Suspendido)");
+        }
+
+            getVentanapDinamica().getjList2().setModel(modelo2);
+
 
     }
 
@@ -140,6 +148,7 @@ public class ModeloPDinamica {
             if (i == numeroProceso) {
                 ParticionPDinamica particion = getVentanapDinamica().getObjMemoria().getParticionesOcupadas().get(i);
                 if (particion.getProceso() != null) {
+                    getVentanapDinamica().getObjMemoria().agregarProcesoInactivo(particion.getProceso());
                     particion.setProceso(null);
                     getVentanapDinamica().getObjMemoria().agregarParticionDesocupada(particion);
                 } else {
@@ -178,7 +187,7 @@ public class ModeloPDinamica {
                 valida = true;
             } else {
                 if (id == 1) {
-                    JOptionPane.showMessageDialog(null, "No se puede agregar el proceso ");
+                    JOptionPane.showMessageDialog(null, "No se puede agregar el proceso");
                 }
             }
         }
