@@ -1,3 +1,4 @@
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -98,7 +99,7 @@ public class ModeloPDinamica {
     public void dibujarParticion() {
         DefaultListModel modelo = new DefaultListModel();
         DefaultListModel modelo2 = new DefaultListModel();
-        System.out.println("Dibujando Partición");
+        System.out.println("Dibujando Particion");
         Graphics g = getVentanapDinamica().getObjMemoria().getGraphics();
         g.setColor(Color.BLACK);
         for (int i = 0; i < getVentanapDinamica().getObjMemoria().getParticionesOcupadas().size(); i++) {

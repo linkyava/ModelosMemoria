@@ -1,12 +1,16 @@
 com\udistrital\modelosmemoria\presentacion\segmentacion\VistaSegmentacion.class
+com\udistrital\modelosmemoria\presentacionPDinamica\VistaPDinamica.class
 com\udistrital\modelosmemoria\main\Launcher.class
 com\udistrital\modelosmemoria\presentacion\paginacion\PanelMemoriaPaginacion.class
 com\udistrital\modelosmemoria\logica\paginacion\Marcos.class
+com\udistrital\modelosmemoria\logica\util\UtilPDinamica.class
 com\udistrital\modelosmemoria\presentacion\segmentacion\Memoria.class
 com\udistrital\modelosmemoria\presentacion\segmentacion\VistaSegmentacion$1.class
+com\udistrital\modelosmemoria\presentacionPDinamica\Test.class
 com\udistrital\modelosmemoria\logica\util\ConvertDecimalToHexadecimal.class
 com\udistrital\modelosmemoria\presentacion\estatica\Controlador.class
 com\udistrital\modelosmemoria\presentacion\paginacion\VistaPaginacion.class
+com\udistrital\modelosmemoria\presentacionPDinamica\MemoriaPDinamica.class
 com\udistrital\modelosmemoria\presentacionPrincipal\ModeloPrincipal.class
 com\udistrital\modelosmemoria\logica\PaginaProceso.class
 com\udistrital\modelosmemoria\logica\paginacion\TablaPaginacion.class
@@ -14,9 +18,11 @@ com\udistrital\modelosmemoria\logica\paginacion\Pagina.class
 com\udistrital\modelosmemoria\logica\ParticionMemoria.class
 com\udistrital\modelosmemoria\presentacion\segmentacion\ModeloSegmentacion.class
 com\udistrital\modelosmemoria\presentacionPDinamica\ControladorPDinamica.class
+com\udistrital\modelosmemoria\presentacionPDinamica\ProcesoPDinamica.class
 com\udistrital\modelosmemoria\logica\util\UtilProcess.class
 com\udistrital\modelosmemoria\presentacion\segmentacion\VistaSegmentacion$2.class
 com\udistrital\modelosmemoria\presentacion\paginacion\VistaPaginacion$1.class
+com\udistrital\modelosmemoria\presentacionPDinamica\ModeloPDinamica.class
 com\udistrital\modelosmemoria\presentacion\segmentacion\ControladoSegmentacion.class
 com\udistrital\modelosmemoria\presentacionPrincipal\ControladorPrincipal.class
 com\udistrital\modelosmemoria\presentacion\estatica\Vista$1.class
@@ -25,6 +31,7 @@ com\udistrital\modelosmemoria\logica\Proceso.class
 com\udistrital\modelosmemoria\presentacion\estatica\Vista.class
 com\udistrital\modelosmemoria\presentacion\estatica\Modelo.class
 com\udistrital\modelosmemoria\logica\Particion.class
+com\udistrital\modelosmemoria\presentacionPDinamica\ParticionPDinamica.class
 com\udistrital\modelosmemoria\presentacion\estatica\PanelMemoria.class
 com\udistrital\modelosmemoria\logica\Segmento.class
 com\udistrital\modelosmemoria\presentacionPrincipal\VistaPrincipal.class
