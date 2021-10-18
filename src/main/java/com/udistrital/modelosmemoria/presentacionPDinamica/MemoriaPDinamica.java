@@ -21,7 +21,7 @@ public class MemoriaPDinamica extends javax.swing.JPanel {
     private static final int MEM_DISP_DISPLAY = 448;
     private ArrayList<ParticionPDinamica> particionesOcupadas;
     private ArrayList<ParticionPDinamica> particionesDesocupadas;
-    private ArrayList<ParticionPDinamica> particionesOtros;
+    private ArrayList<ProcesoPDinamica> procesosInactivos;
     private int memWidth;
     private int memHeigth;
     private int memX;
@@ -41,6 +41,7 @@ public class MemoriaPDinamica extends javax.swing.JPanel {
         initGUI();
         particionesOcupadas = new ArrayList<>();
         particionesDesocupadas = new ArrayList<>();
+        procesosInactivos = new ArrayList<>();
         memoriadisponible = 448;
     }
 
@@ -79,11 +80,15 @@ public class MemoriaPDinamica extends javax.swing.JPanel {
         particionesDesocupadas.add(particion);
     }
 
+    public void agregarProcesoInactivo(ProcesoPDinamica proceso) {
+        procesosInactivos.add(proceso);
+    }
+
     public void actualizarParticionOcupada(List<ParticionPDinamica> listaParticion) {
         particionesOcupadas.clear();
         particionesOcupadas.addAll(listaParticion);
     }
-    
+
     public void actualizarParticionDesOcupada(List<ParticionPDinamica> listaParticion) {
         particionesDesocupadas.clear();
         particionesDesocupadas.addAll(listaParticion);
@@ -143,6 +148,14 @@ public class MemoriaPDinamica extends javax.swing.JPanel {
 
     public void setParticionesDesocupadas(ArrayList<ParticionPDinamica> particionesDesocupadas) {
         this.particionesDesocupadas = particionesDesocupadas;
+    }
+
+    public ArrayList<ProcesoPDinamica> getProcesosInactivos() {
+        return procesosInactivos;
+    }
+
+    public void setProcesosInactivos(ArrayList<ProcesoPDinamica> procesosInactivos) {
+        this.procesosInactivos = procesosInactivos;
     }
 
 }

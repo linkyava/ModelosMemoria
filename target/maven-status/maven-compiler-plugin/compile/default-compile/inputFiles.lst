@@ -1,56 +1,37 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-/Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/presentacionPrincipal/VistaPrincipal.java
-/Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/presentacion/Controlador.java
-/Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/logica/Segmento.java
-/Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/main/Launcher.java
-/Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/logica/Particion.java
-/Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/presentacionPrincipal/ModeloPrincipal.java
-/Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/presentacion/segmentacion/Memoria.java
-/Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/logica/ProcesoMemoria.java
-/Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/logica/util/ConvertDecimalToHexadecimal.java
-/Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/presentacion/Modelo.java
-/Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/presentacion/segmentacion/ControladoSegmentacion.java
-/Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/presentacion/segmentacion/VistaSegmentacion.java
-/Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/presentacion/Vista.java
-/Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/logica/PaginaProceso.java
-/Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/logica/Proceso.java
-/Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/logica/util/UtilProcess.java
-/Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/presentacion/segmentacion/ModeloSegmentacion.java
-/Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/logica/ParticionMemoria.java
-/Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/presentacionPrincipal/ControladorPrincipal.java
-/Users/linkyava/NetBeansProjects/ModelosMemoria/src/main/java/com/udistrital/modelosmemoria/constantes/Constantes.java
-=======
-C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\java\com\udistrital\modelosmemoria\logica\util\UtilProcess.java
-C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\java\com\udistrital\modelosmemoria\presentacion\paginacion\ControladorPaginacion.java
-C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\java\com\udistrital\modelosmemoria\presentacion\estatica\Vista.java
-C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\java\com\udistrital\modelosmemoria\logica\Proceso.java
-C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\java\com\udistrital\modelosmemoria\logica\paginacion\TablaPaginacion.java
-C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\java\com\udistrital\modelosmemoria\presentacion\paginacion\PanelMemoriaPaginacion.java
-C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\java\com\udistrital\modelosmemoria\presentacion\estatica\Modelo.java
-C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\java\com\udistrital\modelosmemoria\main\Launcher.java
-C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\java\com\udistrital\modelosmemoria\presentacion\paginacion\VistaPaginacion.java
-C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\java\com\udistrital\modelosmemoria\presentacion\estatica\PanelMemoria.java
-C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\java\com\udistrital\modelosmemoria\logica\paginacion\Pagina.java
-C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\java\com\udistrital\modelosmemoria\presentacionPrincipal\VistaPrincipal.java
-C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\java\com\udistrital\modelosmemoria\presentacionPrincipal\ControladorPrincipal.java
-C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\java\com\udistrital\modelosmemoria\logica\paginacion\ProcesoPaginacion.java
-C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\java\com\udistrital\modelosmemoria\logica\Particion.java
-C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\java\com\udistrital\modelosmemoria\presentacion\estatica\Controlador.java
-C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\java\com\udistrital\modelosmemoria\presentacion\paginacion\ModeloPaginacion.java
-C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\java\com\udistrital\modelosmemoria\logica\paginacion\Marcos.java
-C:\Users\Cristian C4\Documents\NetBeansProjects\ModelosMemoriaFinal\src\main\java\com\udistrital\modelosmemoria\presentacionPrincipal\ModeloPrincipal.java
->>>>>>> main
-=======
+C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\presentacionPDinamica\VistaPDinamica.java
 C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\presentacionPrincipal\ControladorPrincipal.java
-C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\presentacionPDinamica\ControladorPDinamica.java
-C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\presentacion\Controlador.java
-C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\logica\Particion.java
-C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\presentacionPrincipal\ModeloPrincipal.java
-C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\presentacion\Vista.java
-C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\presentacionPrincipal\VistaPrincipal.java
+C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\presentacion\paginacion\ControladorPaginacion.java
+C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\logica\paginacion\ProcesoPaginacion.java
+C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\presentacion\estatica\Controlador.java
+C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\constantes\Constantes.java
+C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\presentacion\segmentacion\VistaSegmentacion.java
+C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\presentacion\estatica\Vista.java
+C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\presentacionPDinamica\ProcesoPDinamica.java
+C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\logica\util\ConvertDecimalToHexadecimal.java
+C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\presentacionPDinamica\ModeloPDinamica.java
 C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\main\Launcher.java
-C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\presentacion\Modelo.java
 C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\logica\util\UtilProcess.java
+C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\presentacion\segmentacion\ModeloSegmentacion.java
+C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\logica\ProcesoMemoria.java
+C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\logica\Segmento.java
+C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\presentacion\paginacion\ModeloPaginacion.java
+C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\presentacionPrincipal\ModeloPrincipal.java
+C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\presentacionPDinamica\MemoriaPDinamica.java
+C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\presentacion\estatica\PanelMemoria.java
+C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\presentacionPDinamica\Test.java
+C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\presentacion\segmentacion\ControladoSegmentacion.java
 C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\logica\Proceso.java
->>>>>>> remotes/origin/particion_dinamica
+C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\logica\util\UtilPDinamica.java
+C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\logica\paginacion\Pagina.java
+C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\presentacionPDinamica\ControladorPDinamica.java
+C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\presentacionPDinamica\ParticionPDinamica.java
+C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\logica\paginacion\Marcos.java
+C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\logica\paginacion\TablaPaginacion.java
+C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\logica\Particion.java
+C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\presentacion\paginacion\PanelMemoriaPaginacion.java
+C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\presentacion\segmentacion\Memoria.java
+C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\logica\PaginaProceso.java
+C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\presentacionPrincipal\VistaPrincipal.java
+C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\presentacion\estatica\Modelo.java
+C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\presentacion\paginacion\VistaPaginacion.java
+C:\Diego\Universidad\Ingenieria de Software\Semestre 2021-3\Informatica 1\git\ModelosMemoria\src\main\java\com\udistrital\modelosmemoria\logica\ParticionMemoria.java

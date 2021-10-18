@@ -112,9 +112,9 @@ public class ModeloPDinamica {
                 limpiarProceso(particion);
             }
         }
-        if (modelo.size() > 0) {
+
             getVentanapDinamica().getjList1().setModel(modelo);
-        }
+
         if (getVentanapDinamica().getObjMemoria().getParticionesDesocupadas().size() == 0) {
             getVentanapDinamica().getCheckBox().setSelected(false);
         }
@@ -122,9 +122,9 @@ public class ModeloPDinamica {
             ProcesoPDinamica proceso = getVentanapDinamica().getObjMemoria().getProcesosInactivos().get(i);
             modelo2.addElement("Proceso " + proceso.getNombre() + "(" + TamañoKib(proceso.getTamaño() + "") + ") (Suspendido)");
         }
-        if (modelo2.size() > 0) {
+
             getVentanapDinamica().getjList2().setModel(modelo2);
-        }
+
 
     }
 

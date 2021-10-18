@@ -39,6 +39,7 @@ public class ControladorPDinamica implements ActionListener {
             }
             if(boton == vistaPDinamica.getBtnReinicio()){
                 getModelo().reiniciarParticiones();
+                getModelo().dibujarParticion();
             }
            
         }
