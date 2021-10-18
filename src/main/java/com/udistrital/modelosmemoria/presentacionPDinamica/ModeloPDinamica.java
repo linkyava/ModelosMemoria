@@ -13,6 +13,7 @@ import java.util.List;
 import java.util.Random;
 import javax.swing.DefaultListModel;
 import javax.swing.JList;
+import javax.swing.JOptionPane;
 import javax.swing.ListModel;
 
 /**
@@ -85,10 +86,10 @@ public class ModeloPDinamica {
             proceso.setTamaño(tamañoParticion);
             particion.setProceso(proceso);
             particion.setTamaño(tamañoParticion);
-            boolean valida = validarParticiones(particion);
+            boolean valida = validarParticiones(particion, 0);
             if (!valida) {
                 retirarProceso();
-                validarParticiones(particion);
+                validarParticiones(particion, 1);
             }
 
         }
@@ -96,14 +97,14 @@ public class ModeloPDinamica {
 
     public void dibujarParticion() {
         DefaultListModel modelo = new DefaultListModel();
-        System.out.println("Dibujando Particion");
+        System.out.println("Dibujando Particion...");
         Graphics g = getVentanapDinamica().getObjMemoria().getGraphics();
         g.setColor(Color.BLACK);
         for (int i = 0; i < getVentanapDinamica().getObjMemoria().getParticionesOcupadas().size(); i++) {
             ParticionPDinamica particion = getVentanapDinamica().getObjMemoria().getParticionesOcupadas().get(i);
             g.drawRect(0, particion.getInicio(), UtilPDinamica.ANCHO_INICIAL, particion.getTamaño());
             if (particion.getProceso() != null) {
-                modelo.addElement("Proceso "+particion.getProceso().getNombre()+"("+ TamañoKib(particion.getTamaño()+"") + ")");
+                modelo.addElement("Proceso " + particion.getProceso().getNombre() + "(" + TamañoKib(particion.getTamaño() + "") + ")");
                 agregarProceso(particion);
             } else {
                 limpiarProceso(particion);
@@ -148,7 +149,7 @@ public class ModeloPDinamica {
         }
     }
 
-    public boolean validarParticiones(ParticionPDinamica particion) {
+    public boolean validarParticiones(ParticionPDinamica particion, int id) {
         boolean valida = false;
         int posicion = -1;
         ParticionPDinamica p2 = new ParticionPDinamica();
@@ -175,6 +176,10 @@ public class ModeloPDinamica {
                 }
                 eliminarParticion(p);
                 valida = true;
+            } else {
+                if (id == 1) {
+                    JOptionPane.showMessageDialog(null, "No se puede agregar el proceso ");
+                }
             }
         }
         return valida;
@@ -308,12 +313,12 @@ public class ModeloPDinamica {
             int espaciodisponible = getVentanapDinamica().getObjMemoria().getMemoriadisponible();
             Graphics g = getVentanapDinamica().getObjMemoria().getGraphics();
             g.setColor(Color.white);
-            g.fillRect(1, 1, UtilPDinamica.ANCHO_INICIAL, espaciodisponible-1);
+            g.fillRect(1, 1, UtilPDinamica.ANCHO_INICIAL, espaciodisponible - 1);
         }
     }
 
-    private String TamañoKib(String seleccion){
-        String tamañoParticion="";
+    private String TamañoKib(String seleccion) {
+        String tamañoParticion = "";
         if ("2".equals(seleccion)) {
             tamañoParticion = "64K";
         }
@@ -337,5 +342,5 @@ public class ModeloPDinamica {
         }
         return tamañoParticion;
     }
-    
+
 }
